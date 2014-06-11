@@ -5,7 +5,7 @@
 @import '_base/layout'
 
 @import '_partial/header'
-@import '_partial/headerwrapper'
+@import '_partial/header-wrapper'
 @import '_partial/article'
 @import '_partial/comment'
 @import '_partial/index'
