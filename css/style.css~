@@ -101,13 +101,6 @@ a:hover {
   }
 }
 
-#sidebar{
-  _width: 250px;
-}
-#sidebar.search{
-    *width: 240px;
-}
-
 #header {
   text-shadow: 0 0 1px #fff;
 /*margin 50px auto*/
@@ -657,6 +650,15 @@ article footer .addthis iframe {
   margin-right: 10px;
   display: inline-block;
 }
+
+
+#sidebar{
+  _width: 250px;
+}
+#sidebar .search{
+    *width: 240px;
+}
+
 #footer {
   color: #999;
 /* margin  25px auto 25px auto */
