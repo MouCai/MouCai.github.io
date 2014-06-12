@@ -653,14 +653,10 @@ article footer .addthis iframe {
 
 
 #sidebar{
-  _width: 250px;
+  *width: 250px;
 }
-#sidebar .search{
-    _width: 240px;
-}
-
 #sidebar .search form input {
-    _width: 240px;
+  *width: 220px;
 }
 
 #footer {
