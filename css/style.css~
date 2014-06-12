@@ -656,7 +656,7 @@ article footer .addthis iframe {
   _width: 250px;
 }
 #sidebar .search{
-    *width: 240px;
+    _width: 240px;
 }
 
 #footer {
