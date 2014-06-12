@@ -100,6 +100,14 @@ a:hover {
     margin-right: 0;
   }
 }
+
+#sidebar{
+  _width: 250px;
+}
+#sidebar.search{
+    *width: 240px;
+}
+
 #header {
   text-shadow: 0 0 1px #fff;
 /*margin 50px auto*/
