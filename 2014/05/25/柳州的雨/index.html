@@ -123,8 +123,15 @@
 
 
 <section id="comment">
-  <h1 class="title">留言</h1>
 
+
+
+  <h1 class="title">留言</h1>
+  
+    <div class="ds-thread"></div>
+  
+  
+<!--
   
       <!--
 <div id="fb-root"></div>
@@ -143,6 +150,7 @@
 -->
       
   
+
 </section>
 
 </div></div>
@@ -209,11 +217,28 @@
   </div>
   <script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
-<!-- <!--[if lt IE 9]><script src="/js/ie.js"></script><![endif]-->
+<!--[if lte IE 9]><script src="/js/ie.js"></script><![endif]-->
 <script src="/js/gallery.js"></script>
+
 <!--
 
 -->
+
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"moucai"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>

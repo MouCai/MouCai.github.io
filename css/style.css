@@ -501,9 +501,10 @@ article footer .addthis iframe {
 #comment {
   padding: 20px;
   background: #fff;
+  border: 1px solid #ddd;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
-  margin-bottom: 50px;
+/* margin-bottom 50px */
 }
 #comment .title {
   font-weight: normal;
@@ -611,6 +612,8 @@ article footer .addthis iframe {
 }
 #sidebar .search {
   margin-bottom: 30px;
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
 }
 #sidebar .search input {
   background: #fff;
@@ -822,7 +825,7 @@ pre .clojure .title {
 pre .deletion {
   color: #dc322f;
 }
-/* IE HACK */
+/* IE 6,7,8 HACK */
 #sidebar{
   *width: 250px;
 }
