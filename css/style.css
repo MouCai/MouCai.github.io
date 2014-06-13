@@ -12,7 +12,7 @@
 body {
   background: #fff;
   color: #444;
-  font-family: "\5FAE\8F6F\96C5\9ED1","Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 14px;
   text-shadow: 0 0 1px transparent;
 }
@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato","\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Lato", "\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 h1 {
   font-size: 1.8em;
@@ -41,10 +41,17 @@ h3 {
 a {
   text-decoration: none;
   color: #258fb8;
-  transition: color .3s;
-  -moz-transition: color .3s;  /* Firefox 4 */
-  -webkit-transition: color .3s; /* Safari 和 Chrome */
-  -o-transition: color .3s;  /* Opera */
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  transition: color 0.3s;
+  -moz-transition: color 0.3s;
+/* Firefox 4 */
+  -webkit-transition: color 0.3s;
+/* Safari 和 Chrome */
+  -o-transition: color 0.3s;
+/* Opera */
 }
 a:hover {
   text-decoration: underline;
@@ -75,6 +82,13 @@ a:hover {
     width: 100%;
   }
 }
+.background-effect {
+  background-image: url("../../img/flower.jpg");
+  -webkit-background-size: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
 #main-col {
   width: 900px;
 }
@@ -100,7 +114,6 @@ a:hover {
     margin-right: 0;
   }
 }
-
 #header {
   text-shadow: 0 0 1px #fff;
 /*margin 50px auto*/
@@ -124,8 +137,8 @@ a:hover {
   margin-top: 10px;
 }
 #header #main-nav {
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
-  line-height: 2.5em;
+  font-family: "Lato", "\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 3em;
 }
 #header #main-nav ul {
   list-style: none;
@@ -137,12 +150,8 @@ a:hover {
 #header-wrapper {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
-  padding: 25px 0;
-  margin: 0 0 25px 0;
-  background-image: url("../../img/flower.jpg");
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  background-size: 100%;
+  padding: 2em 0;
+  margin: 0 0 2em 0;
 }
 article {
   border: 1px solid #ddd;
@@ -269,7 +278,7 @@ article header .icon:before {
 }
 article header time {
   color: #999;
-  font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 0.9em "Lato", "\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
   display: block;
   line-height: 1;
@@ -505,7 +514,7 @@ article footer .addthis iframe {
   padding: 5px 10px;
   background: #ddd;
   color: #999;
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Lato", "\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 0 1px #fff;
   margin-bottom: 50px;
 }
@@ -605,7 +614,7 @@ article footer .addthis iframe {
 }
 #sidebar .search input {
   background: #fff;
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Lato", "\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 1em;
   padding: 10px 15px;
@@ -650,32 +659,18 @@ article footer .addthis iframe {
   margin-right: 10px;
   display: inline-block;
 }
-
-
-#sidebar{
-  *width: 250px;
-}
-#sidebar .search form input {
-  *width: 220px;
-}
-
 #footer {
   color: #999;
 /* margin  25px auto 25px auto */
-  font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 0.9em/1.6 "Lato", "\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 0 1px #fff;
 }
 #footer-wrapper {
   -webkit-box-shadow: 0px -2px 3px #ddd;
   box-shadow: 0px -2px 3px #ddd;
-  margin-top: 25px;
-  padding: 15px 0;
+  margin-top: 2em;
+  padding: 1em 0;
   background-position: 50%;
-  -webkit-background-size: 100%;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  background-size: 100%;
-  background-image: url("../../img/flower.jpg");
 }
 .entry .gist {
   background: #eee;
@@ -826,4 +821,11 @@ pre .clojure .title {
 }
 pre .deletion {
   color: #dc322f;
+}
+/* IE HACK */
+#sidebar{
+  *width: 250px;
+}
+#sidebar .search form input {
+  *width: 220px;
 }
