@@ -59,8 +59,18 @@ a:hover {
 .alignleft {
   float: left;
 }
+@media screen and (max-width: 900px) {
+  .alignleft {
+    float: none;
+  }
+}
 .alignright {
   float: right;
+}
+@media screen and (max-width: 900px) {
+  .alignright {
+    float: none;
+  }
 }
 .clearfix {
   zoom: 1;
@@ -125,33 +135,57 @@ a:hover {
   color: #258fb8;
   text-decoration: none;
 }
-#header h1 {
+@media screen and (max-width: 900px) {
+  #header div {
+    margin-left: 1em;
+  }
+}
+#header div h1 {
   font-weight: normal;
   font-size: 3em;
   line-height: 1;
 }
-#header h2 {
+#header div h2 {
   font-weight: normal;
   font-size: 0.9em;
   line-height: 1;
-  margin-top: 10px;
+  margin-top: 1em;
 }
 #header #main-nav {
   font-family: "Lato", "\5FAE\8F6F\96C5\9ED1", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 3em;
 }
+@media screen and (max-width: 900px) {
+  #header #main-nav {
+    background-color: #fff;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    margin: 1em 0 0 0;
+  }
+}
 #header #main-nav ul {
   list-style: none;
 }
+@media screen and (max-width: 900px) {
+  #header #main-nav ul {
+    float: right;
+  }
+}
 #header #main-nav ul li {
   float: left;
-  margin-left: 30px;
+  margin-right: 1em;
 }
 #header-wrapper {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   padding: 2em 0;
   margin: 0 0 2em 0;
+}
+@media screen and (max-width: 900px) {
+  #header-wrapper {
+    padding: 0 0;
+  }
 }
 article {
   border: 1px solid #ddd;
@@ -831,4 +865,11 @@ pre .deletion {
 }
 #sidebar .search form input {
   *width: 220px;
+}
+.background-effect{
+  _width:100%;
+}
+
+#main-nav ul {
+  _float:right;
 }
