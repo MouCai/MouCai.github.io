@@ -1,4 +1,3 @@
-@import url("//fonts.useso.com/css?family=Lato:400,400italic");
 @font-face {
   font-family: 'FontAwesome';
   font-style: normal;
@@ -93,7 +92,7 @@ a:hover {
   }
 }
 .background-effect {
-  background-image: url("../../img/flower.jpg");
+/* background-image url(../../img/flower.jpg) */
   -webkit-background-size: 100%;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -166,6 +165,7 @@ a:hover {
 }
 #header #main-nav ul {
   list-style: none;
+  overflow: hidden;
 }
 @media screen and (max-width: 900px) {
   #header #main-nav ul {
@@ -174,7 +174,33 @@ a:hover {
 }
 #header #main-nav ul li {
   float: left;
-  margin-right: 1em;
+  padding-left: 1em;
+}
+#header #main-nav ul li a {
+  display: block;
+}
+#header #main-nav ul #right-menu-wrapper {
+  display: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+@media screen and (max-width: 900px) {
+  #header #main-nav ul #right-menu-wrapper {
+    padding-left: 0;
+    margin-left: 1em;
+    display: block;
+    border-left: 1px solid #ddd;
+  }
+}
+#header #main-nav ul #right-menu-wrapper .icon {
+  padding-left: 1em;
+  padding-right: 1em;
+  font: 1.5em FontAwesome;
+  text-align: center;
+}
+#header #main-nav ul #right-menu-wrapper .icon:before {
+  line-height: 2em;
+  content: '\F0C9';
 }
 #header-wrapper {
   -webkit-box-shadow: 1px 2px 3px #ddd;
@@ -214,6 +240,12 @@ article.link .title a:after {
   font: 12px FontAwesome;
   padding-left: 10px;
   vertical-align: super;
+}
+@media screen and (max-width: 900px) {
+  article {
+    border-left: none;
+    border-right: none;
+  }
 }
 article .post-content {
   padding: 20px 20px 15px 77px;
@@ -605,8 +637,10 @@ article footer .addthis iframe {
 }
 @media screen and (max-width: 900px) {
   #sidebar {
-    float: none;
     width: 100%;
+    display: none;
+    margin: 0;
+    padding: 0;
   }
 }
 #sidebar .widget {
@@ -872,4 +906,182 @@ pre .deletion {
 
 #main-nav ul {
   _float:right;
+}
+/* sdir */
+/* line 3, ../../src/scss/sidr/_base.scss */
+.sidr {
+  /* Default Settings */
+  display: none;
+  background-position: bottom center;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 120%;
+  z-index: 999999;
+  width: 62%;
+  overflow-x: none;
+  overflow-y: auto;
+  padding-left: 2px;
+  /* border: 1px solid #ddd; */
+}
+.sidr div {
+  margin-bottom: 30px;
+}
+/* line 15, ../../src/scss/sidr/_base.scss */
+.sidr .sidr-inner {
+  padding: 0 0 15px;
+  background-color: #fff;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+/* line 18, ../../src/scss/sidr/_base.scss */
+.sidr .sidr-inner > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 24, ../../src/scss/sidr/_base.scss */
+.sidr.right {
+  left: auto;
+  right: -62%;
+}
+/* line 29, ../../src/scss/sidr/_base.scss */
+.sidr.left {
+  left: -62%;
+  right: auto;
+}
+/* line 41, ../../src/scss/sidr/_base.scss */
+.sidr h1, .sidr h2, .sidr h3, .sidr h4, .sidr h5, .sidr h6 {
+  font-size: 1em; 
+  font-weight: normal;
+  line-height: 24px;
+}
+/* line 52, ../../src/scss/sidr/_base.scss */
+.sidr p {
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+/* line 55, ../../src/scss/sidr/_base.scss */
+.sidr p a {
+  /* color: rgba(51, 51, 51, 0.9); */
+}
+/* line 60, ../../src/scss/sidr/_base.scss */
+.sidr > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 65, ../../src/scss/sidr/_base.scss */
+.sidr ul {
+  display: block;
+  margin: 0 0 15px;
+  padding: 0;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid white;
+}
+/* line 72, ../../src/scss/sidr/_base.scss */
+.sidr ul li {
+  display: block;
+  margin: 0;
+  line-height: 48px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #dfdfdf;
+}
+/* line 81, ../../src/scss/sidr/_base.scss */
+.sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
+  border-top: none;
+  line-height: 49px;
+}
+/* line 85, ../../src/scss/sidr/_base.scss */
+.sidr ul li:hover > a, .sidr ul li:hover > span, .sidr ul li.active > a, .sidr ul li.active > span, .sidr ul li.sidr-class-active > a, .sidr ul li.sidr-class-active > span {
+
+}
+/* line 90, ../../src/scss/sidr/_base.scss */
+.sidr ul li a, .sidr ul li span {
+  padding: 0 15px;
+  /* display: block; */
+  text-decoration: none;
+  /* color: #333333; */
+}
+/* line 97, ../../src/scss/sidr/_base.scss */
+.sidr ul li ul {
+  border-bottom: none;
+  margin: 0;
+}
+/* line 100, ../../src/scss/sidr/_base.scss */
+.sidr ul li ul li {
+  line-height: 40px;
+  font-size: 13px;
+}
+/* line 104, ../../src/scss/sidr/_base.scss */
+.sidr ul li ul li:last-child {
+  border-bottom: none;
+}
+/* line 110, ../../src/scss/sidr/_base.scss */
+.sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active {
+  border-top: none;
+  line-height: 41px;
+}
+/* line 114, ../../src/scss/sidr/_base.scss */
+.sidr ul li ul li:hover > a, .sidr ul li ul li:hover > span, .sidr ul li ul li.active > a, .sidr ul li ul li.active > span, .sidr ul li ul li.sidr-class-active > a, .sidr ul li ul li.sidr-class-active > span {
+  -webkit-box-shadow: inset 0 0 15px 3px #ebebeb;
+  -moz-box-shadow: inset 0 0 15px 3px #ebebeb;
+  box-shadow: inset 0 0 15px 3px #ebebeb; 
+}
+/* line 119, ../../src/scss/sidr/_base.scss */
+.sidr ul li ul li a, .sidr ul li ul li span {
+  color: rgba(51, 51, 51, 0.8);
+  padding-left: 30px;
+}
+/* line 128, ../../src/scss/sidr/_base.scss */
+.sidr form {
+  /* margin: 0 15px; */
+}
+/* line 132, ../../src/scss/sidr/_base.scss */
+.sidr label {
+  font-size: 13px;
+}
+/* line 146, ../../src/scss/sidr/_base.scss */
+.sidr input[type="text"],
+.sidr input[type="password"],
+.sidr input[type="date"],
+.sidr input[type="datetime"],
+.sidr input[type="email"],
+.sidr input[type="number"],
+.sidr input[type="search"],
+.sidr input[type="tel"],
+.sidr input[type="time"],
+.sidr input[type="url"],
+.sidr textarea, .sidr select {
+  width: 100%;
+  border: 1px solid #ddd;
+  /* font-size: 13px; */
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0 0 1em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  color: rgba(51, 51, 51, 0.6);
+  display: block;
+  clear: both;
+}
+/* line 160, ../../src/scss/sidr/_base.scss */
+.sidr input[type=checkbox] {
+  width: auto;
+  display: inline;
+  clear: none;
+}
+/* line 167, ../../src/scss/sidr/_base.scss */
+.sidr input[type=button],
+.sidr input[type=submit] {
+  color: #f8f8f8;
+  background: #333333;
+}
+/* line 171, ../../src/scss/sidr/_base.scss */
+.sidr input[type=button]:hover,
+.sidr input[type=submit]:hover {
+  background: rgba(51, 51, 51, 0.9);
 }
