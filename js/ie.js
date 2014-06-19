@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".search input[placeholder]").placeholder();
+  $("input[placeholder]").placeholder();
 });
 
 /* 让 IE 6,7,8,9 支持 placeholder 属性 */

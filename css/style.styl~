@@ -15,5 +15,8 @@
 @import '_partial/footer-wrapper'
 @import '_partial/syntax'
 
-
+/* IE 6,7,8 HACK */
 @import '_base/ie.css'
+
+/* sdir */
+@import '_partial/sidr.css'
